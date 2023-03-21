@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  # GET /restaurants and DELETE /restaurants/:id
+  resources :restaurants, only: [:index, :destroy]
 end
