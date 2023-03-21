@@ -8,6 +8,11 @@ class PizzasController < ApplicationController
   def show
     @pizza = Pizza.find(params[:id])
     render json: @pizza
+
+    # rescue not found using not_found method
+    rescue ActiveRecord::RecordNotFound
+      not_found
+    end
   end
 
   def create
@@ -38,5 +43,9 @@ class PizzasController < ApplicationController
 
   def pizza_params
     params.require(:pizza).permit(:name, :price, :restaurant_id)
+  end
+
+  def not_found
+    render json: {error: "Pizza not found"}, status: :not_found
   end
 end
