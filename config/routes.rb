@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   # GET /restaurants and DELETE /restaurants/:id
-  resources :restaurants, only: [:index, :destroy]
-  resources :pizzas, only: [:index, :destroy]
+  resources :restaurants, only: [:index, :destroy, :show]
+  resources :pizzas, only: [:index, :destroy, :show]
 end

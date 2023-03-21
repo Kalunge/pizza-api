@@ -12,7 +12,6 @@ class PizzasController < ApplicationController
     # rescue not found using not_found method
     rescue ActiveRecord::RecordNotFound
       not_found
-    end
   end
 
   def create
