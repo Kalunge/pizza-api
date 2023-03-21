@@ -24,4 +24,13 @@ end
   )
 end
 
+# create 10 restaurant_pizzas
+10.times do
+  RestaurantPizza.create(
+    restaurant_id: Faker::Number.between(from: 1, to: 10),
+    pizza_id: Faker::Number.between(from: 1, to: 10),
+    price: Faker::Number.between(from: 1, to: 30)
+  )
+end
+
 # migration to add restaurant_id to pizzas
