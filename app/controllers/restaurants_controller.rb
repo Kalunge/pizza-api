@@ -48,3 +48,5 @@ class RestaurantsController < ApplicationController
     render json: {error: "Restaurant not found"}, status: :not_found
   end
 end
+
+

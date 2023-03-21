@@ -7,4 +7,10 @@ Rails.application.routes.draw do
   # GET /restaurants and DELETE /restaurants/:id
   resources :restaurants, only: [:index, :destroy, :show]
   resources :pizzas, only: [:index, :destroy, :show]
+
+  # POST /restaurant_pizzas
+  resources :restaurant_pizzas, only: [:create]
 end
+
+
+
