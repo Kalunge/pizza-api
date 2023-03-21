@@ -42,7 +42,7 @@ class PizzasController < ApplicationController
   private
 
   def pizza_params
-    params.require(:pizza).permit(:name, :price, :restaurant_id)
+    params.require(:pizza).permit(:name, :ingredients, :restaurant_id)
   end
 
   def not_found

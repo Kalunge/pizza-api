@@ -5,3 +5,23 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+# use faker to generate fake data
+require "faker"
+# create 10 restaurants
+10.times do
+  Restaurant.create(
+    name: Faker::Restaurant.name,
+    address: Faker::Address.full_address
+  )
+end
+
+# create 10 pizzas
+10.times do
+  Pizza.create(
+    name: Faker::Food.dish,
+    ingredients: Faker::Food.ingredient,
+    restaurant_id: Faker::Number.between(from: 1, to: 10)
+  )
+end
+
+# migration to add restaurant_id to pizzas

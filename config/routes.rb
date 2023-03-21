@@ -6,5 +6,5 @@ Rails.application.routes.draw do
 
   # GET /restaurants and DELETE /restaurants/:id
   resources :restaurants, only: [:index, :destroy]
-  # Get 
+  resources :pizzas, only: [:index, :destroy]
 end
